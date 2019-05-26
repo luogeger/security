@@ -1,6 +1,6 @@
 
 
-### 4-2 覆盖httpBasic及基本原理
+### 4-2 默认用户认证及基本原理
 
 > Filter
 
@@ -13,16 +13,16 @@
 
 > FilterSecurityInterceptor
 
-### 4-3 自定义用户认证逻辑
+### 4-3 自定义用户认证
 
 > 如何获取用户信息
 
 ```markdown
-`Spring-Security`获取用户名的逻辑是封装这个接口后面的，`interface UserDetailsService`, 里面只有一个方法
-`UserDetails loadUserByUsername(String username) throws UsernameNotFoundException`
-通过这个方法：把前端传来的用户名到数据查到后，把数据封装到`UserDeatils`的某个实现类，并且返回。
-`Security`会拿着这个数据做校验，校验通过以后就把这个用户存到到`Session`里面，就是登陆成功了。
-如果找不到这个用户就会抛出异常。
+    Spring-Security获取用户名的逻辑是封装这个接口后面的，interface UserDetailsService, 里面只有一个方法
+    UserDetails loadUserByUsername(String username) throws UsernameNotFoundException
+    通过这个方法：把前端传来的用户名到数据查到后，把数据封装到UserDeatils的某个实现类，并且返回。
+    Security会拿着这个数据做校验，校验通过以后就把这个用户存到到Session里面，就是登陆成功了。
+    如果找不到这个用户就会抛出异常。
 ```
 
 > 校验
@@ -30,19 +30,19 @@
 ```markdown
     返回的对象非必须是User对象，只要是UserDetails的实现类就可以
 
-    `username`
-    `password`: 数据库存的密码
-    `enabled`: 是否删除
-    `accountNonExpired`: 账户是否过期
-    `accountNonLocked`: 是否锁定
-    `credentialsNonExpired`: 密码是否过期
-    `authorities`: 用户的权限，返回当前用户拥有哪些权限，然后到安全配置(BrowserSecurityConfig)里面去验证用户的权限，
+    username
+    password: 数据库存的密码
+    enabled: 是否删除
+    accountNonExpired: 账户是否过期
+    accountNonLocked: 是否锁定
+    credentialsNonExpired: 密码是否过期
+    authorities: 用户的权限，返回当前用户拥有哪些权限，然后到安全配置(BrowserSecurityConfig)里面去验证用户的权限，
 ```
 
 > 密码的加密解密过程
 
 ```markdown
-    处理加密解密的过程在 `interface PasswordEncoder`
+    处理加密解密的过程在 interface PasswordEncoder
     
     package org.springframework.security.crypto.password;
     public interface PasswordEncoder {
@@ -54,6 +54,13 @@
     
     }
 ```
+
+### 4-4 个性用户认证
+
+> 自定义login.html及关闭csrf
+
+- 判断返回html还是json
+- login.html的配置权限开放，默认是使用自己的login.html
 
 
 ### 4-12

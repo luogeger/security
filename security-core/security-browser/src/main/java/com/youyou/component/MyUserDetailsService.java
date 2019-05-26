@@ -29,7 +29,7 @@ public class MyUserDetailsService implements UserDetailsService {
         //return new User(username, "123456", AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 
         // 通过用户信息判断用户是否过期, 这里返回的对象非必须是User对象，只要是UserDetails的实现类就可以，
-        String password = passwordEncoder.encode("123456");// 相当于是从后数据拿到的加密后的密码
+        String password = passwordEncoder.encode("123");// 相当于是从后数据拿到的加密后的密码
         logger.info("数据库密码： "+ password);
         return new User(username,password, true, true, true, true,
                 AuthorityUtils.commaSeparatedStringToAuthorityList(""));
