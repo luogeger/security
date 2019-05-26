@@ -42,7 +42,17 @@
 > 密码的加密解密过程
 
 ```markdown
-    处理加密解密的过程在 `interface PasswordEncoder`里
+    处理加密解密的过程在 `interface PasswordEncoder`
+    
+    package org.springframework.security.crypto.password;
+    public interface PasswordEncoder {
+        // 开发人员配置调用，把前端的密码加密后存放到数据库
+    	String encode(CharSequence rawPassword);
+    
+        // spring-securtiy内部调用，把UserDetails的信息和前端传来的密码进行对比
+    	boolean matches(CharSequence rawPassword, String encodedPassword);
+    
+    }
 ```
 
 
