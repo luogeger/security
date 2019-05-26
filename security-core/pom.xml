@@ -13,10 +13,6 @@
     <groupId>com.youyou.security</groupId>
     <artifactId>security-core</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>security-browser</module>
-        <module>security-app</module>
-    </modules>
 
 
 
