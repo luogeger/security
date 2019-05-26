@@ -10,7 +10,6 @@ spring:
 
 # security 默认配置的安全配置，如果项目里有spring-security的包，会自动做安全的配置，
 # 默认用户名：user, 密码：Using default security password: a25398ef-8655-4cc5-812d-dfed5b908384
-
 #security:
 #  basic:
 #    enabled: false
