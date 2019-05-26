@@ -25,7 +25,25 @@
 如果找不到这个用户就会抛出异常。
 ```
 
+> 校验
 
+```markdown
+    返回的对象非必须是User对象，只要是UserDetails的实现类就可以
+
+    `username`
+    `password`: 数据库存的密码
+    `enabled`: 是否删除
+    `accountNonExpired`: 账户是否过期
+    `accountNonLocked`: 是否锁定
+    `credentialsNonExpired`: 密码是否过期
+    `authorities`: 用户的权限，返回当前用户拥有哪些权限，然后到安全配置(BrowserSecurityConfig)里面去验证用户的权限，
+```
+
+> 密码的加密解密过程
+
+```markdown
+    处理加密解密的过程在 `interface PasswordEncoder`里
+```
 
 
 ### 4-12

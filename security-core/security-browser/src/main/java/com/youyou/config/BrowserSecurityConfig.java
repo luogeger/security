@@ -6,7 +6,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 
 /**
  * create by luoxiaoqing
- * 覆盖security的basic.enable配置
+ * 自定义安全配置：覆盖security的basic.enable配置
  */
 @Configuration
 public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -15,8 +15,8 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override// configure 有三个重载方法
     protected void configure(HttpSecurity http) throws Exception {
 
-        //http.formLogin() // 表单页面的形式认证，代替httpBasic认证(弹窗)
-        http.httpBasic()
+        //http.httpBasic()
+        http.formLogin() // 表单页面的形式认证，代替httpBasic认证(弹窗)
                 .and()
                 .authorizeRequests()// 下面的都是授权的配置
                 .anyRequest()
