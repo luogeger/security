@@ -19,6 +19,12 @@
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.youyou.security</groupId>
+            <artifactId>security-core</artifactId>
+            <version>${youyou.security.version}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
 

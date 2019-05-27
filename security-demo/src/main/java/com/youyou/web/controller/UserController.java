@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @GetMapping
+    @GetMapping("")
     public List<User> query() {
         List<User> users = new ArrayList<>();
         users.add(new User());

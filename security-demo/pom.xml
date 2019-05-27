@@ -17,9 +17,15 @@
     <dependencies>
         <dependency>
             <groupId>com.youyou.security</groupId>
+            <artifactId>security-core</artifactId>
+            <version>${youyou.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.youyou.security</groupId>
             <artifactId>security-browser</artifactId>
             <version>${youyou.security.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

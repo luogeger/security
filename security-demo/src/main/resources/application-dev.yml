@@ -1,3 +1,5 @@
+
+
 spring:
     datasource:
       driver-class-name: com.mysql.jdbc.Driver
@@ -13,3 +15,10 @@ spring:
 #security:
 #  basic:
 #    enabled: false
+
+
+
+youyou:
+  security:
+    browser:
+      loginPage: /demo-login.html

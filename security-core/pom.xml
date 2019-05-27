@@ -6,17 +6,21 @@
         <artifactId>security-parent</artifactId>
         <groupId>com.youyou.security</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../security-parent/pom.xml</relativePath>
+        <relativePath>../security-parent</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.youyou.security</groupId>
     <artifactId>security-core</artifactId>
-    <packaging>pom</packaging>
 
 
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-oauth2</artifactId>
