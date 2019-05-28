@@ -12,6 +12,7 @@
 
     <groupId>com.youyou.security</groupId>
     <artifactId>security-core</artifactId>
+    <packaging>pom</packaging>
 
 
 

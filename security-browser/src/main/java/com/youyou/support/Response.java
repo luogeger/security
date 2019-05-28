@@ -15,4 +15,10 @@ public class Response {
     public Response(String msg) {
         this.msg = msg;
     }
+    public Response(String msg, Object data) {
+        this.msg = msg;
+        this.data = data;
+    }
+
+
 }

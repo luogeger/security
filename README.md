@@ -62,6 +62,11 @@
 - 判断返回html还是json
 - login.html的配置权限开放，默认是使用自己的login.html
 
+> 登陆成功和失败，返回json或redirect
+
+
+
+
 
 ### 4-12
     

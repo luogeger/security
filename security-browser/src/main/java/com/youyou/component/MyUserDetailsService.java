@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * create by luoxiaoqing
- * 自定义获取用户信息的配置类
+ * 自定义获取用户信息的配置类: 获取用户密码和数据库密码对比，不再使用随机生成的密码登陆
  */
 @Component
 public class MyUserDetailsService implements UserDetailsService {
@@ -24,7 +24,7 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        logger.info("username: " + username);
+        logger.info("登陆用户名: " + username);
         // 根据用户名查找用户信息
         //return new User(username, "123456", AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
 

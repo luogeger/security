@@ -13,4 +13,8 @@ public class BrowserYml {
 
     /** 没有权限访问时需要跳转的页面 */
     private String  loginPage = "/login.html";
+
+    /** 后端是redirect还是返回json*/
+    private LoginType loginType = LoginType.JSON;
+
 }

@@ -33,7 +33,7 @@ public class BrowserSecurityController {
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
 
     @Autowired
-    private SecurityYml securityYml;
+    public SecurityYml securityYml;
 
     @RequestMapping("/authentication/browser")
     @ResponseStatus(code = HttpStatus.UNAUTHORIZED)// 如果是访问的url，返回401状态码
