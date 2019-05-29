@@ -11,12 +11,16 @@
 
     <modules>
         <module>../security-core</module>
+        <module>../security-browser</module>
+        <module>../security-app</module>
         <module>../security-demo</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
         <youyou.security.version>1.0-SNAPSHOT</youyou.security.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
 
@@ -57,6 +61,7 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
         </plugins>
